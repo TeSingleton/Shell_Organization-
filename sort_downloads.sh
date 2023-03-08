@@ -18,19 +18,19 @@ for file in "$downloads_dir"/*; do
     filename=$(basename "$file")
     extension="${filename##*.}"
     case "$extension" in
-    doc | docx | pdf)
+    doc | docx | pdf | json | pptx | csv | rtdf | fig | webp | html | js | txt | bin)
       mv "$file" "$docs_dir"
       ;;
-    jpg | jpeg | JPEG | JPG | png | gif | heic | HEIC)
+    jpg | jpeg | JPEG | JPG | png | gif | heic | HEIC | svg)
       mv "$file" "$images_dir"
       ;;
-    mp3 | flac | wav | wave)
+    mp3 | flac | wav | wave | m4a | aiff | aif | rx2 | band)
       mv "$file" "$music_dir"
       ;;
-    mp4 | mov | MOV)
+    mp4 | mov | MOV | 3gp)
       mv "$file" "$videos_dir"
       ;;
-    zip)
+    zip | 7z)
       mv "$file" "$zip_dir"
       ;;
     dmg)
